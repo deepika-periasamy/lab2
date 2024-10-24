@@ -4,10 +4,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  Wanna-say-hello:
+  say-hello:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello World
         run: echo "Hello, World!"
+  say-goodbye:
+     needs: say-hello
+     runs-on: ubuntu-latest
+     steps:
       - name: Print bye world
         run: echo "Bye, Hello world!"
