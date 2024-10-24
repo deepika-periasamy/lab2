@@ -5,8 +5,8 @@ on:
   push:
   
 env:
-GREETING_MESSAGE: "Hello World!"
-GOODBYE_MESSAGE: "Good Bye World!"
+  GREETING_MESSAGE: "Hello World!"
+  GOODBYE_MESSAGE: "Good Bye World!"
 
 jobs:
   say-hello:
