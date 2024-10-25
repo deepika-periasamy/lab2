@@ -9,7 +9,15 @@ env:
   GOODBYE_MESSAGE: "Good Bye World!"
 
 jobs:
+  lint-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out code
+        uses: actions/checkout@v3
+      - name: Run YAML Lint
+        uses: ibiqlik/action-yamllint@v3
   say-hello:
+    needs: lint-yaml
     runs-on: ubuntu-latest
     steps:
       - name: Print ${GREETING_MESSAGE}
